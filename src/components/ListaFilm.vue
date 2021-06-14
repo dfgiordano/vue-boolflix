@@ -1,14 +1,32 @@
 <template>
-    <section>
+    <section class="container">
+        <div class="row">
+             <div class="col-3" v-for="film in ElencoFilm"
+            :key="film.id">
+            <Film
+            :film="film" 
+            />
+            </div>
+        </div>
+       
         
     </section>
 </template>
 
 <script>
 import axios from 'axios';
+import Film from './Film';
 
 export default {
     name: "Listafilm",
+    components: {
+        Film,
+    },
+    data: function() {
+        return {
+            ElencoFilm: [],
+        }
+    },
     created: function () {
         axios
             .get('https://api.themoviedb.org/3/search/movie', {
@@ -19,8 +37,10 @@ export default {
                 }
             })
             .then(
-                (res) => {
-                    console.log(res);
+                (result) => {
+                    // console.log(result.data.results);
+                    this.ElencoFilm = result.data.results;
+                    // console.log(this.ElencoFilm);
                 }
             );
     }

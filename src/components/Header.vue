@@ -1,18 +1,29 @@
 <template>
     <header>
         <img src="../assets/boolfix.png" alt="boolfix_logo">
-        <div>
-             <input type="text" placeholder="Cerca...">
-            <button>
-
+        <form >
+            <input 
+            type="text" placeholder="Cerca..."
+            v-model="ricercaFilm">
+            <button
+            @click.prevent="$emit('search', ricercaFilm)">
+                cerca
             </button>
-        </div>
+        </form>
     </header>
 </template>
 
 <script>
 export default {
     name: "Header",
+    data: function () {
+       return {
+           ricercaFilm: ''
+       } 
+    },
+    methods: {
+        
+    }
 }
 </script>
 
