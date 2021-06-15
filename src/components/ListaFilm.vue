@@ -6,7 +6,18 @@
                 v-for="film in movies"
                 :key="film.id"
             >
-                <Film :film="film" />
+                <Film 
+                :film="film"
+                />
+            </div>
+            <div
+                class="col-3"
+                v-for="serie in serieTv"
+                :key="serie.id"
+            >
+                <SerieTv 
+                :serie="serie"
+                />
             </div>
         </div>
     </section>
@@ -14,12 +25,15 @@
 
 <script>
 import Film from './Film';
+import SerieTv from './SerieTv';
 
 export default {
     name: "Listafilm",
-    props: ['movies'],
+    props: ['movies',
+            'serieTv'],
     components: {
         Film,
+        SerieTv,
     },
 }    
 </script>

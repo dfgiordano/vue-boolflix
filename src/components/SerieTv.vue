@@ -1,59 +1,60 @@
 <template>
-    <div class="movies">
+    <div class="serie_tv">
         <h4>
-            <a href="#"> {{ film.title }} </a>
+            <a href="#"> {{ serie.name }} </a>
         </h4>
         <h5>
-            <a href="#"> {{ film.original_title }} </a>
+            <a href="#"> {{ serie.original_name }} </a>
         </h5>
-        <div v-if=" film.original_language === 'it' ">
+        <div v-if=" serie.original_language === 'it' ">
             <a href="#">
                 <img src="../assets/it.png" alt="italian_flag">
             </a>
         </div>
-        <div v-else-if=" film.original_language === 'en' ">
+        <div v-else-if=" serie.original_language === 'en' ">
             <a href="#">
                 <img src="../assets/en.png" alt="english_flag">
             </a>
         </div>
-        <div v-else-if=" film.original_language === 'es' ">
+        <div v-else-if=" serie.original_language === 'es' ">
             <a href="#">
                 <img src="../assets/spain.png" alt="spanish_flag">
             </a>
         </div>
-        <div v-else-if=" film.original_language === 'pt' ">
+        <div v-else-if=" serie.original_language === 'pt' ">
             <a href="#">
                 <img src="../assets/portugal.png" alt="portugal_flag">
             </a>
         </div>
-        <div v-else-if=" film.original_language === 'ru' ">
+        <div v-else-if=" serie.original_language === 'ru' ">
             <a href="#">
                 <img src="../assets/russia.png" alt="russian_flag">
             </a>
         </div>
-        <div v-else-if=" film.original_language === 'fr' ">
+        <div v-else-if=" serie.original_language === 'fr' ">
             <a href="#">
                 <img src="../assets/france.jpeg" alt="french_flag">
             </a>
         </div>
-        <div v-else-if=" film.original_language === 'de' ">
+        <div v-else-if=" serie.original_language === 'de' ">
             <a href="#">
                 <img src="../assets/france.jpeg" alt="german_flag">
             </a>
         </div>
         <div v-else>
-            <a href="#"> {{ film.original_language }} </a>
+            <a href="#"> {{ serie.original_language }} </a>
         </div>
         <div>
-            <a href="#"> {{ film.vote_average }} </a>
+            <a href="#"> {{ serie.vote_average }} </a>
         </div>
-    </div>
+    </div> 
 </template>
 
 <script>
 export default {
-    name: "Film",
-    props: ["film"]
+    name: "SerieTv",
+    props: ["serie"],
+
 }
 </script>
 

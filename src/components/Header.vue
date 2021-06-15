@@ -1,9 +1,12 @@
 <template>
     <header>
-        <img src="../assets/boolfix.png" alt="boolfix_logo">
+        <a href="#">
+            <img src="../assets/boolflix.png" alt="boolflix_logo">
+        </a>
         <form >
             <input 
-            type="text" placeholder="Cerca..."
+            type="text" 
+            placeholder="Cerca..."
             v-model="ricercaFilm">
             <button
             @click.prevent="$emit('search', ricercaFilm)">
@@ -21,9 +24,6 @@ export default {
            ricercaFilm: ''
        } 
     },
-    methods: {
-        
-    }
 }
 </script>
 
@@ -37,7 +37,7 @@ export default {
         background-color: yellow;
     }
     button {
-        height: 20px;
+        height: 30px;
         width: 50px;
     }
 </style>
