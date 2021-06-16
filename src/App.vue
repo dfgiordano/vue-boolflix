@@ -4,7 +4,7 @@
         @search="cercaFilm"
       />
       <main>
-        <ListaFilm 
+        <ListaRisultati 
           :movies="movies"
           :serieTv="serieTv"
         />
@@ -16,13 +16,13 @@
 import axios from 'axios';
 
 import Header from './components/Header';
-import ListaFilm from './components/ListaFilm';
+import ListaRisultati from './components/ListaRisultati';
 
 export default {
   name: 'App',
   components: {
     Header,
-    ListaFilm,
+    ListaRisultati,
   },
   data: function () {
     return {
