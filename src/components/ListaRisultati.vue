@@ -54,5 +54,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+    .col-3 {
+        margin: 40px 0;
+    }
 </style>

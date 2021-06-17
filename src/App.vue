@@ -51,6 +51,7 @@ export default {
               this.serieTv = result.data.results;
           }
         )
+        .catch()
     },
     getMovies() {
       axios
@@ -73,5 +74,8 @@ export default {
 
 <style lang="scss">
 @import './style/general.scss';
+body {
+  background-image: radial-gradient(circle, #a23131, #7a252e, #521c25, #2b1319, #000000);
+}
 
 </style>
