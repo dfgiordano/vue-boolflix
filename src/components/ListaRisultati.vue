@@ -54,7 +54,13 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../style/general.scss';
+@import '../style/variables.scss';
+
     .col-3 {
         margin: 40px 0;
+    }
+    h2 {
+        color: $main_color;
     }
 </style>
